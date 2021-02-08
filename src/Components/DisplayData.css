@@ -1,0 +1,20 @@
+/* .weather-container {
+   width: 80%; 
+   overflow-x: auto;
+   white-space: nowrap; 
+} */
+
+.weather-div {
+    /* border: 1px solid red; */
+    color: white;
+    display: inline-block;
+    margin: 15px;
+    width: 250px;
+    height: 400px;
+    background-color: rgba(231, 153, 238, .3);
+    /* border: 1px solid rgb(91, 23, 97); */
+    border-radius: 12px;
+    box-shadow: 7px 7px rgba(79, 30, 91, 0.5);
+}
+
+

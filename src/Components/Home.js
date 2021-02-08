@@ -1,10 +1,10 @@
 import React from 'react';
-import ListData from './DisplayData.js';
+import DisplayData from './DisplayData.js';
 
 const Home = () => {
     return (
         <div>
-            <ListData />
+            <DisplayData />
         </div>
     );
 };

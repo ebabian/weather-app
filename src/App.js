@@ -18,7 +18,7 @@ function App() {
 
   const params = {
       key: API_KEY,
-      days: 5
+      days: 3
   }
 
   const searchData = async (event) => {
@@ -44,14 +44,16 @@ function App() {
       <h1>Weather App!</h1>
 
       {/* CITY NAME SEARCH */}
-      <input
-        type="text"
-        placeholder="Search a city..."
-        className="search"
-        onChange={(e) => setCity(e.target.value)}
-        value={city}
-        onKeyPress={searchData}
-      />
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search a city..."
+          className="search-bar"
+          onChange={(e) => setCity(e.target.value)}
+          value={city}
+          onKeyPress={searchData}
+        />
+      </div>
 
       {/* RENDER DATA */}
       <div className="data">
@@ -59,6 +61,7 @@ function App() {
       <DisplayData 
         data={data}
         isLoading={isLoading}
+        city={city}
         />
       </div>
     </div>
