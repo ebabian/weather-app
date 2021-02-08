@@ -1,5 +1,5 @@
 import './App.css';
-import ListData from './Components/ListData.js';
+import DisplayData from './Components/DisplayData.js';
 import Home from './Components/Home'
 import { Route, Redirect } from 'react-router-dom';
 import React, { useState, useEffect, useRef } from 'react';
@@ -42,6 +42,8 @@ function App() {
     
     <div className="App">
       <h1>Weather App!</h1>
+
+      {/* CITY NAME SEARCH */}
       <input
         type="text"
         placeholder="Search a city..."
@@ -50,8 +52,14 @@ function App() {
         value={city}
         onKeyPress={searchData}
       />
+
+      {/* RENDER DATA */}
       <div className="data">
       <h2>{data.name}</h2>
+      <DisplayData 
+        data={data}
+        isLoading={isLoading}
+        />
       </div>
     </div>
   

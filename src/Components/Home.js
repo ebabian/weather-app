@@ -1,5 +1,5 @@
 import React from 'react';
-import ListData from './ListData.js';
+import ListData from './DisplayData.js';
 
 const Home = () => {
     return (
