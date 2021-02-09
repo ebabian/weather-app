@@ -28,9 +28,9 @@ function App() {
       )
         .then((res) => res.json())
         .then((resData) => {
-          console.log(resData)
-          setData(resData)
-          setLoading(false)
+            setData(resData)
+            setLoading(false)
+            // console.log(resData.city.name)
         })
     }
     // if(isLoading) {
@@ -39,9 +39,7 @@ function App() {
   }
 
   return (
-    
     <div className="App">
-      <h1>Weather App!</h1>
 
       {/* CITY NAME SEARCH */}
       <div className="search-container">
@@ -56,14 +54,14 @@ function App() {
       </div>
 
       {/* RENDER DATA */}
+
       <div className="data">
-      <h2>{data.name}</h2>
-      <DisplayData 
+        <DisplayData 
         data={data}
         isLoading={isLoading}
-        city={city}
         />
       </div>
+      
     </div>
   
   );

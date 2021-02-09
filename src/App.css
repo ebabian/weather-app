@@ -11,12 +11,11 @@
     background: linear-gradient(90deg, rgba(245,113,186,1) 0%, rgba(74,55,129,1) 0%, rgba(168,50,119,1) 100%);
 }
 
-/* .search-container {
-  border: 1px solid black;
+.search-container {
   width: 100%;
   text-align: center;
-  margin: 30px 0 35px 0;
-} */
+  margin: 80px 0 35px 0;
+}
 
 .search-bar {
   color: white;
@@ -35,6 +34,8 @@
 .search-container .search-bar:focus {
   border: none;
   outline: none;
+  background-color: #fdfbf5;
+  color: black;
 }
 
 .search-bar::placeholder {

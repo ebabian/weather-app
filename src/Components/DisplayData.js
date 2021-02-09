@@ -1,26 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import './DisplayData.css'
 
-const DisplayData = ({ data, isLoading, city }) => {
+const DisplayData = ({ data, isLoading }) => {
 
     if(isLoading) {
       return <div className="data"> </div>
     }
 
+    // if(data === "undefined") {
+    //     return <div className="data">ERROR</div>
+    // }
+
     console.log(data.list)
+
+
 
     return (
         <>
         <div className="weather-container">
-            {
-                data.list.map((res, index) => (
+            { typeof data.city != "undefined" ?  
+                (
+                <div>
+                { data.list.map((res, index) => (
                     <div className="weather-div" key={index}>
                         <div>
-                            {res.dt_txt}
+                            {(res.dt_txt)}
                         </div>
                         <div>
-                            {city.toUpperCase()}
+                            {data.city.name.toUpperCase()}
                         </div>
                         <div>
                             {res.main.temp}
@@ -36,8 +43,12 @@ const DisplayData = ({ data, isLoading, city }) => {
                         </div>
                     </div>
                 ))
-            }
+                }
+            </div>
+             ) : ("Error, please search a different city")} 
         </div>
+        
+        
         </>
     );
 };
